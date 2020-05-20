@@ -1,0 +1,8 @@
+# IDE artifacts
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Render artifacts
+*.nb.html
