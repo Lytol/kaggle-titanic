@@ -1,7 +1,7 @@
 library(readr)
 library(here)
 
-train <- read_csv(here("data/raw/train.csv"),
+train_data <- read_csv(here("data/raw/train.csv"),
   col_types = cols(
     PassengerId = col_integer(), 
     Survived = col_logical(),

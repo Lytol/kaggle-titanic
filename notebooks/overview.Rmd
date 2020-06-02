@@ -12,10 +12,10 @@ source(here("R/import.R"))
 ## Passengers
 
 ```{r}
-ggplot(train) + geom_bar(aes(Sex))
-ggplot(train) + geom_histogram(aes(Age))
-ggplot(train) + geom_bar(aes(Pclass))
-ggplot(train) + geom_histogram(aes(Fare))
-ggplot(train) + geom_bar(aes(Embarked))
-ggplot(train) + geom_bar(aes(Survived))
+ggplot(train_data) + geom_bar(aes(Survived, fill = Survived))
+ggplot(train_data) + geom_bar(aes(Sex, fill = Survived))
+ggplot(train_data) + geom_histogram(aes(Age, fill = Survived))
+ggplot(train_data) + geom_bar(aes(Pclass, fill = Survived))
+ggplot(train_data) + geom_histogram(aes(Fare, fill = Survived))
+ggplot(train_data) + geom_bar(aes(Embarked, fill = Survived))
 ```
