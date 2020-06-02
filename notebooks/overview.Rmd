@@ -3,13 +3,13 @@ title: "Overview"
 output: html_notebook
 ---
 
-```{r echo=FALSE}
+```{r include=FALSE}
 library(tidyverse)
 library(here)
-source(here("R/import.R"))
+source(here("R/titanic.R"))
 ```
 
-## Passengers
+## Passengers (training)
 
 ```{r}
 ggplot(train_data) + geom_bar(aes(Survived, fill = Survived))

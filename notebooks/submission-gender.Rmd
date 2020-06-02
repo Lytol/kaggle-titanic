@@ -1,0 +1,20 @@
+---
+title: "Prediction - By Gender"
+output: html_notebook
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(here)
+source(here("R/titanic.R"))
+```
+
+This is intentionally a silly and straightforward prediction based solely on the gender of the passenger. If the passenger is the test set is male, we'll assume they did not survive; alternately, if a passenger is female, we'll assume that they did survive.
+
+```{r}
+submission_path <- here("data/submissions/gender.csv")
+
+predictions <- test_data %>%
+  mutate(Survived = ifelse(Sex == "male", 0, 1)) %>%
+  write_predictions(submission_path)
+```
